@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+const ghpages = true;
+module.exports = {
+    reactStrictMode: true,
+    images: {
+        loader: 'akamai',
+        path: '',
+    },
+    env: {
+        ghpages: ghpages,
+        ghpath: '/resumify',
+    },
+    basePath: ghpages ? '/resumify' : '',
+};
